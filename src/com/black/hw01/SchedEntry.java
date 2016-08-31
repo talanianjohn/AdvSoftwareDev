@@ -1,9 +1,10 @@
 package com.black.hw01;
 
+
 /**
  * Created by tblack on 8/31/16.
  */
-public class SchedEntry {
+public class SchedEntry{
     String Day;
     String Title;
     String Detail;
@@ -35,5 +36,13 @@ public class SchedEntry {
 
     public void setDetail(String detail) {
         Detail = detail;
+    }
+
+    @Override
+    public String toString() {
+        return "SchedEntry{" +
+                "Day='" + Day + '\'' +
+                ", Title='" + Title + '\'' +
+                '}';
     }
 }
