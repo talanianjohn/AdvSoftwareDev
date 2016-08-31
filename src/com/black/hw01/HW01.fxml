@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane  fx:controller="com.black.hw01.Controller" id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="553.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2">
+  <children>
+    <TextArea fx:id="ta" layoutX="41.0" layoutY="14.0" prefHeight="57.0" prefWidth="477.0" wrapText="true" editable="false"/>
+    <TableView fx:id="tbl" layoutX="41.0" layoutY="86.0" prefHeight="276.0" prefWidth="477.0">
+      <columns>
+        <TableColumn  fx:id="Monday" prefWidth="75.0" text="Monday" />
+        <TableColumn  fx:id="Tuesday" text="Tuesday" />
+        <TableColumn fx:id="Wednesday" text="Wednesday" />
+        <TableColumn fx:id="Thursday" text="Thursday" />
+        <TableColumn fx:id="Friday" text="Friday" />
+      </columns>
+    </TableView>
+  </children>
+</AnchorPane>
