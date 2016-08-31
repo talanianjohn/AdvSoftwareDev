@@ -7,12 +7,15 @@ package com.black.hw01;
  * HANRAHAN
  */
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
-
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.cell.PropertyValueFactory;
+
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -20,30 +23,25 @@ import java.util.ResourceBundle;
  * Created by Tanner on 8/30/2016.
  */
 public class Controller implements Initializable {
-
-    Object[][] data = {
-            {"Work", "Work", "Work", "Work", "Work"},
-            {"CS-410", "CS-420", "CS-410", "CS-420", " "},
-            {"CS-395", "IHFR-101", "CS-395", "IHFR-100", " "},
-            {" ", " ", "MGT-101", " ", " "}
-    };
-
-
     @FXML
     private TextArea ta;
     @FXML
-    private TableColumn Monday;
+    private TableColumn DayOfWeek ;
     @FXML
-    private TableColumn Tuesday;
+    private TableColumn EvntOnDay;
+
     @FXML
-    private TableColumn Wednesday;
-    @FXML
-    private TableColumn Thursday;
-    @FXML
-    private TableColumn Friday;
-    @FXML
-    private TableView<Object[][]> tbl;
-    
+    private TableView<SchedEntry> tbl;
+
+
+    final ObservableList<SchedEntry> data = FXCollections.observableArrayList(
+            new SchedEntry("Monday - Friday","Work"),
+            new SchedEntry("Monday and Wednesday","CS-410"),
+            new SchedEntry("Monday and Wednesday","CS-395"),
+            new SchedEntry("Tuesday and Thursday","CS-420"),
+            new SchedEntry("Tuesday and Thursday","IHFR-101"),
+            new SchedEntry("Wednesday","MGT-101")
+    );
 
 
 
@@ -53,6 +51,16 @@ public class Controller implements Initializable {
                 "Hanrahan"; // Header String
 
         ta.setText(info);
+
+        DayOfWeek.setCellValueFactory(
+                new PropertyValueFactory<SchedEntry,String>("Day")
+        );
+        EvntOnDay.setCellValueFactory(
+                new PropertyValueFactory<SchedEntry,String>("Title")
+        );
+
+        tbl.setItems(data);
+
     }
 
     @Override
