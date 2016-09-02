@@ -2,10 +2,10 @@
   <artifact type="jar" name="HW01">
     <output-path>$PROJECT_DIR$/out/artifacts/HW01</output-path>
     <root id="archive" name="HW01.jar">
-      <element id="module-output" name="ASD" />
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/output/com/black/hw01/META-INF/MANIFEST.MF" />
       </element>
+      <element id="module-output" name="AdvSoftwareDev" />
     </root>
   </artifact>
 </component>

@@ -76,7 +76,8 @@ public class Controller implements Initializable {
         LoadHashMap();
         final String info="Tanner Black\n" +
                 "CS410 Advanced Software Dev\n" +
-                "Hanrahan"; // Header String
+                "Hanrahan\n"+
+                "**Double Click Row for Details**"; // Header String
 
         ta.setText(info);
         tbl.setRowFactory( tv -> {

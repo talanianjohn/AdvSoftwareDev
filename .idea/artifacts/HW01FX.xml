@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="HW01FX">
+    <output-path>$PROJECT_DIR$/out/artifacts/HW01FX</output-path>
+    <root id="archive" name="HW01FX.jar">
+      <element id="module-output" name="AdvSoftwareDev" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/output/com/black/hw01/FX/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>

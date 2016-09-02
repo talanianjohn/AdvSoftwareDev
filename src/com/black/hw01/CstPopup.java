@@ -19,10 +19,10 @@ import static javafx.application.Application.launch;
  * Created by tblack on 8/31/16.
  */
 
-class CstPopup extends Stage {
+public class CstPopup extends Stage {
 
 
-    CstPopup(String in){
+    public CstPopup(String in){
         Label x = new Label(in);
         VBox y = new VBox();
         y.getChildren().add(x);
