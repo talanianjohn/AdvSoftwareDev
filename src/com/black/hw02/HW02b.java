@@ -1,6 +1,5 @@
 package com.black.hw02;
 
-import com.black.hw01.CstPopup;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -17,7 +16,7 @@ public class HW02b extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("HW02.fxml"));
         primaryStage.setTitle("HW02 -- TBlack");
-        primaryStage.setScene(new Scene(root, 560, 400));
+        primaryStage.setScene(new Scene(root, 560, 500));
         primaryStage.show();
         //new CstPopup("hello");
 

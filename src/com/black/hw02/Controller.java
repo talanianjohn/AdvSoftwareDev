@@ -7,22 +7,13 @@ package com.black.hw02;
  * HANRAHAN
  */
 
-import com.black.hw01.CstPopup;
-import com.black.hw01.SchedEntry;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableRow;
-import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
-import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 import java.net.URL;
-import java.util.HashMap;
 import java.util.ResourceBundle;
 
 /**
@@ -30,8 +21,7 @@ import java.util.ResourceBundle;
  */
 public class Controller implements Initializable {
 
-    Image duck = new Image("https://upload.wikimedia.org/wikipedia/commons/5/51/Mandarin.duck.arp.jpg");
-    Image duck2 = new Image("https://upload.wikimedia.org/wikipedia/commons/2/24/Male_mallard_duck_2.jpg");
+    Image duck = new Image(new ServerQuery().getResults().get(0));
 
     @FXML
     TextArea ta;
@@ -41,7 +31,9 @@ public class Controller implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+        ta.setText("Tanner Black\n" +
+                "Advanced Software Dev\n" +
+                "CS395 Hanrahan");
     img.setImage(duck);
     img.setFitWidth(477.0);
     img.setFitHeight(340.0);
