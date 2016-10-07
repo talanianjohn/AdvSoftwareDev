@@ -1,4 +1,4 @@
-package com.black.hw04;
+package com.black.exam.hw04;
 
 import javax.swing.*;
 import java.awt.*;
