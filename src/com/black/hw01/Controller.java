@@ -11,12 +11,11 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableRow;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
-import javafx.scene.control.TableColumn;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.stage.Stage;
 
 import java.net.URL;
 import java.util.HashMap;
@@ -61,6 +60,8 @@ public class Controller implements Initializable {
 
     }
 
+
+    // FIll table with entries
     final ObservableList<SchedEntry> data = FXCollections.observableArrayList(
             new SchedEntry("Monday - Friday","Work"),
             new SchedEntry("Monday and Wednesday","CS-410"),
@@ -71,7 +72,7 @@ public class Controller implements Initializable {
     );
 
 
-
+// Load header field
     public void LoadHeader(){
         LoadHashMap();
         final String info="Tanner Black\n" +

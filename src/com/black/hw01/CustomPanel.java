@@ -13,6 +13,11 @@ import java.util.HashMap;
 
 
 public class CustomPanel {
+    /*
+    * Custom JavaFX panel creates a HashMap and associates details to it, that are later called by a ID connected to an action listener.
+    *
+    * */
+
     HashMap<String,String> details = new HashMap<>();
 
     public CustomPanel() {
@@ -27,7 +32,7 @@ public class CustomPanel {
                 return false;
             }
         };
-
+        //Header info is added to the header text field.
         final String info="Tanner Black\n<br>" +
                 "CS410 Advanced Software Dev\n<br>" +
                 "Hanrahan\n<br>" +

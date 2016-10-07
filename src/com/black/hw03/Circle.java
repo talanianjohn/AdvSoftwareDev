@@ -6,7 +6,9 @@ public class Circle {
     private int		diameter, x, y;
     private Color	color;
 
-    public Circle(int size, Color shade, int upperX, int upperY) {
+    //This class draws a circle
+
+    public Circle(int size, Color shade, int upperX, int upperY) { // Circle Constructor
         diameter = size;
         color = shade;
         x = upperX;
@@ -15,38 +17,12 @@ public class Circle {
 
     public void draw(Graphics page) {
         page.setColor(color);
-        page.fillOval(x, y, diameter, diameter);
+        page.fillOval(x, y, diameter, diameter); // creates a circle
     }
 
-    public void setDiameter(int size) {
-        diameter = size;
-    }
 
     public void setColor(Color shade) {
         color = shade;
-    }
+    }//Sets the color of the circle
 
-    public void setX(int upperX) {
-        x = upperX;
-    }
-
-    public void setY(int upperY) {
-        y = upperY;
-    }
-
-    public int getDiameter() {
-        return diameter;
-    }
-
-    public Color getColor() {
-        return color;
-    }
-
-    public int getX() {
-        return x;
-    }
-
-    public int getY() {
-        return y;
-    }
 }

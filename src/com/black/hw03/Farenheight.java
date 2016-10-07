@@ -6,7 +6,7 @@ import java.awt.*;
 /**
  * Created by tanner on 9/18/16.
  */
-public class Farenheight extends JPanel {
+public class Farenheight extends JPanel { //Poorly Name Panel
     JButton ctof = new JButton();
     JButton ftoc = new JButton();
     JTextArea output = new JTextArea();
